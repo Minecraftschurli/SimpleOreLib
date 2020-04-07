@@ -116,7 +116,6 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 task sourcesJar(type: Jar) {
     classifier = "sources"
     from sourceSets.main.allJava
-    from sourceSets.api.allJava
 }
 
 artifacts {
@@ -128,7 +127,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/Minecraftschurli/")
+            url = uri("https://maven.pkg.github.com/Minecraftschurli/SimpleOreLib")
             credentials {
                 username = gpr_user
                 password = gpr_token
@@ -138,6 +137,8 @@ publishing {
     publications {
         gpr(MavenPublication) {
             from components.java
+            artifact sourcesJar
+            artifact javadocJar
         }
     }
 }
