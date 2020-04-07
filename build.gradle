@@ -37,11 +37,11 @@ minecraft {
         client {
             workingDirectory project.file('run')
 
-            // Recommended logging data for a userdev environment
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
-            // Recommended logging level for the console
+            property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'fml.earlyprogresswindow', 'false'
+
+            ideaModule "${project.name}.main"
 
             mods {
                 simpleorelib {
@@ -53,11 +53,11 @@ minecraft {
         server {
             workingDirectory project.file('run')
 
-            // Recommended logging data for a userdev environment
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
-            // Recommended logging level for the console
+            property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'fml.earlyprogresswindow', 'false'
+
+            ideaModule "${project.name}.main"
 
             mods {
                 simpleorelib {
@@ -69,11 +69,11 @@ minecraft {
         data {
             workingDirectory project.file('run')
 
-            // Recommended logging data for a userdev environment
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
-            // Recommended logging level for the console
+            property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'fml.earlyprogresswindow', 'false'
+
+            ideaModule "${project.name}.main"
 
             args '--mod', 'simpleorelib', '--all', '--output', file('src/generated/resources/')
 
