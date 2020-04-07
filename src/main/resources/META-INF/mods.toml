@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+
+[[mods]]
+    modId="simpleorelib"
+    version="1.0.0.0"
+    displayName="SimpleOreLib"
+    authors="Minecraftschurli"
+    description='''
+    A library that handles basic ore generation
+    '''
+
+[[dependencies.simpleorelib]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.simpleorelib]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
