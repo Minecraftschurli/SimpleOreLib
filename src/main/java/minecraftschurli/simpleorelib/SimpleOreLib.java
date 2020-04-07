@@ -65,10 +65,20 @@ public final class SimpleOreLib {
         });
     }
 
+    /**
+     * Registeres a {@link net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType} for the given {@link BiomeFilter}
+     * @param filter the {@link BiomeFilter} to register the {@link net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType filler} for
+     * @param filler the {@link net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType filler} to register
+     */
     public static void addFiller(BiomeFilter filter, OreFeatureConfig.FillerBlockType filler){
         fillers.putIfAbsent(filter, filler);
     }
 
+    /**
+     * Gets the {@link net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType filler} for the given {@link Biome}
+     * @param biome the {@link Biome} to get the {@link net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType filler} for
+     * @return the {@link net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType filler} for the given {@link Biome}
+     */
     public static OreFeatureConfig.FillerBlockType fillerForBiome(Biome biome) {
         return fillers.entrySet()
                 .stream()

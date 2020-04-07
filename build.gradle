@@ -124,6 +124,7 @@ artifacts {
 }
 
 publishing {
+    tasks.publish.dependsOn build
     repositories {
         maven {
             name = "GitHubPackages"
@@ -139,6 +140,11 @@ publishing {
             from components.java
             artifact sourcesJar
             artifact javadocJar
+            pom.withXml {
+                def node = asNode()
+                if(node.dependencies.size() > 0)
+                    node.remove(node.dependencies) // Remove deps, as they are all mappings-dependent and/or forge
+            }
         }
     }
 }
