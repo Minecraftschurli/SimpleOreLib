@@ -41,6 +41,7 @@ public final class SimpleOreLib {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        //noinspection deprecation
         DeferredWorkQueue.runLater(this::registerOres);
     }
 
