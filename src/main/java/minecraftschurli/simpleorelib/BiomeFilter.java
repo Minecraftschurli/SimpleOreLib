@@ -111,7 +111,8 @@ public class BiomeFilter implements Predicate<Biome>, Function<Biome, Boolean> {
 
     /**
      * Creates a {@link BiomeFilter} that matches all provided {@link Biome Biomes}
-     * @param biomes the {@link Biome Biomes} the {@link BiomeFilter} should match
+     * @param priority the priority for the associated {@link net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType FillerBlockType} if there is any
+     * @param biomes   the {@link Biome Biomes} the {@link BiomeFilter} should match
      */
     public BiomeFilter(int priority, @Nonnull Biome... biomes) {
         this(priority, Predicates.in(Arrays.asList(biomes)));
@@ -119,6 +120,7 @@ public class BiomeFilter implements Predicate<Biome>, Function<Biome, Boolean> {
 
     /**
      * Creates a {@link BiomeFilter} that matches every {@link Biome} where biomePredicate evaluates to true
+     * @param priority       the priority for the associated {@link net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType FillerBlockType} if there is any
      * @param biomePredicate the {@link Predicate} that is used to filter the {@link Biome Biomes}
      */
     public BiomeFilter(int priority, @Nonnull Predicate<Biome> biomePredicate) {
