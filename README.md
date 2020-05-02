@@ -12,7 +12,8 @@ repositories {
         }
     }
 }
+
 dependencies {
-    compile fg.deobf("minecraftschurli:SimpleOreLib:<mcVersion>-<modVersion>")
+    compile fg.deobf("minecraftschurli:SimpleOreLib:[CURRENT_MC_VERSION]-[CURRENT_SIMPLE_ORE_LIB_VERSION]")
 }
 ```
