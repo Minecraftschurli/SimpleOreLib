@@ -7,8 +7,8 @@ repositories {
         name = "GitHubPackages"
         url = "https://maven.pkg.github.com/Minecraftschurli/SimpleOreLib"
         credentials {
-            username = gpr_user
-            password = gpr_token
+            username = <gpruser>
+            password = <gprtoken>
         }
     }
 }
